@@ -27,6 +27,7 @@
 #define IDC_COPYFUNC                    1014
 #define IDC_BUTTON3                     1015
 #define IDC_CLOSE                       1015
+#define IDC_RESETFUNC                   1016
 #define IDC_RADWINDOW                   1018
 #define IDC_DIALOG                      1019
 #define IDC_HANDLEMSG                   1022

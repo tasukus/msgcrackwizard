@@ -112,6 +112,7 @@ BEGIN
     GROUPBOX        "Type",IDC_STATIC,149,47,109,37
     GROUPBOX        "Options",IDC_STATIC,149,85,109,33
     LTEXT           "0 message(s) selected.",IDC_NUMSELECT,7,105,75,8
+    PUSHBUTTON      "&Reset",IDC_RESETFUNC,263,86,57,15
 END
 
 IDD_ABOUT DIALOGEX 0, 0, 253, 92

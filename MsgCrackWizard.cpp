@@ -282,6 +282,15 @@ void Cls_OnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotify)
     case IDC_RADWINDOW:
         UpdateUI(hwnd);
         break;
+	case IDC_RESETFUNC:
+        {
+			const int Num = (int)::SendDlgItemMessage(hwnd, IDC_MESSAGES, LB_GETCOUNT, 0, 0);
+            for (int index = 0 ; index < Num; index++ ) {
+                ::SendDlgItemMessage(hwnd, IDC_MESSAGES, LB_SETSEL, FALSE, index);
+            }
+            UpdateUI(hwnd);
+		}
+        break;
             
     }
 }
