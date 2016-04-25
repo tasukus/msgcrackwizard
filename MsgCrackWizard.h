@@ -26,15 +26,19 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 // global variables with enough large buffers..  ;)
 #define BUFFER			 5000
 const  SIZE_T cbStrBuf = 5000;
-const  MAX_WINDOW_ID   = 1024;
+const UINT MAX_WINDOW_ID   = 1024;
 
 // ownerdrawn listbox handles
 extern HBITMAP  hbmpKeyboard, hbmpMouse, hbmpClipboard, hbmpGeneral, hbmpMDI, hbmpNonClient;
 extern HBITMAP  hbmpWindow;
 
 // define for window transparency
-#define WS_EX_LAYERED	0x80000
-#define LWA_ALPHA		2
+#ifndef WS_EX_LAYERED
+	#define WS_EX_LAYERED	0x80000
+#endif
+#ifndef LWA_ALPHA
+	#define LWA_ALPHA		2
+#endif
 
 // typedef for pointer to SetLayeredWindowAttributes
 typedef DWORD (WINAPI * PSLWA) (HWND, DWORD, BYTE, DWORD);
